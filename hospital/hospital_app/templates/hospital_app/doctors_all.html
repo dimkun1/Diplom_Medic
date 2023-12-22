@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<ul class="list-articles">
+    {% for user in doctors %}
+        <li>
+            <div class="article-panel"></div>
+            {% if user.photo %}
+                <p><img class="img-article-left" src="{{ user.photo.url }}" width="200" height="200"></p>
+            {% endif %}
+
+
+            <div class="clear"></div>
+
+            <p>{{ user.cat_doctor }}</p>
+            <p>{{ user.first_name }} {{ user.last_name }}</p>
+
+            <p class="link-read-post">
+
+            </p>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
+

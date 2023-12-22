@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{{ title }}
+
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши достижения</title>
+    <style>
+
+
+        h2 {
+            color: black;
+        }
+
+        h3 {
+            color: #009688;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+        }
+
+        ul li p {
+            margin: 5px 0;
+        }
+
+        ul li ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .achievement {
+            border-bottom: 2px solid #009688;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .achievement img {
+            max-width: 20%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Наши достижения в области медицины</h2>
+
+    <div class="achievement">
+        <img src="/media/photos/doctor.jpg" alt="Достижение 1">
+        <h3>Открытие нового метода лечения</h3>
+        <p>Наша медицинская команда разработала инновационный метод лечения, который привел к революции в медицинской практике. Метод эффективен при лечении широкого спектра заболеваний.</p>
+    </div>
+
+    <div class="achievement">
+        <img src="/media/photos/laboratory.jpg" alt="Достижение 2">
+        <h3>Исследование генетики и здоровья</h3>
+        <p>Мы провели крупное исследование генетических факторов, влияющих на здоровье. Наши открытия помогают предсказывать возможные заболевания и разрабатывать персонализированные методы лечения.</p>
+    </div>
+
+    <div class="achievement">
+        <img src="/media/photos/test-tube.jpg" alt="Достижение 3">
+        <h3>Разработка вакцины против новых болезней</h3>
+        <p>Мы активно участвуем в исследованиях и разработке вакцин, направленных на предотвращение новых и опасных инфекций. Наши успехи помогают обеспечить здоровье миллионов людей.</p>
+    </div>
+
+
+</body>
+</html>
+{% endblock %}

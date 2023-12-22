@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <ul class="list-articles">
+    {% for appoint in appointment %}
+    <li><div class="article-panel">
+    <p class="first">Доктор: {{appoint.doctor.first_name}} {{appoint.doctor.last_name}}| Пациент:
+	{{ appoint.patient.last_name|default:"неизвестен" }} {{ appoint.patient.first_name }}</p>
+	<p class="last">Дата: {{appoint.start_date_time|date:"d-m-Y H:i:s"}}</p>
+    </div>
+
+
+    {% if appoint.doctor.photo %}
+        <p><img class="img-article-left" src="{{appoint.doctor.photo.url}} " width="200" height="200"></p>
+    {% endif %}
+          <p> жалобы: {{ appoint.complaint }}
+            {% autoescape off %}
+          <p> заключение: {{appoint.readings|linebreaks|truncatewords:40}}<p>
+            {% endautoescape %}
+        <div class="clear"></div>
+            <p class="link-read-post"><a href="{% url 'doctor_answer' appoint.id %}">Ответить</a></p>
+
+        </li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+

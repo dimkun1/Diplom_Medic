@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{{ title }}
+
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медицинская клиника "Медик"</title>
+    <style>
+
+
+        header {
+            background-color: #3F4137;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .hero-image {
+            background-image: url('media/photos/building.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 80px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        h1 {
+            margin-bottom: 0.5em;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .service {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .services .service img {
+        max-width: 100%;
+        height: 200px; /* Замените значение на желаемую высоту */
+        width: 200px; /* Замените значение на желаемую высоту */
+        object-fit: cover; /* Заполнение области изображения, сохраняя пропорции */
+        border-radius: 10px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Медицинская клиника</h1>
+        <p>Ваше здоровье - наш приоритет</p>
+    </header>
+
+    <section class="hero-image">
+        <div class="hero-text">
+            <h1>Профессиональная медицинская помощь "Медик"</h1>
+<!--            <p>Лучшие врачи, современное оборудование и забота о вашем здоровье.</p>-->
+        </div>
+    </section>
+
+    <section>
+
+        <div class="services">
+            <div class="service">
+                <img src="/media/photos/blood.jpg" alt="Service 1">
+                <h3>Общая медицина</h3>
+                <p>Профилактика, диагностика и лечение различных заболеваний.</p>
+            </div>
+            <div class="service">
+                <img src="/media/photos/analysis.jpg" alt="Service 2">
+                <h3>Лабораторные исследования</h3>
+                <p>Современные методы анализа для точной диагностики.</p>
+            </div>
+            <div class="service">
+                <img src="/media/photos/stethoscope.jpg" alt="Service 3">
+                <h3>Медицинские обследования</h3>
+                <p>Комплексные обследования для контроля состояния здоровья.</p>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
+{% endblock %}
